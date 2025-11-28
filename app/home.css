@@ -1,0 +1,448 @@
+/* GLOBAL CLEANUP */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  background: #f6f0e7;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======================= NAVBAR ======================= */
+
+.navbar {
+  width: fit-content;
+  padding: 24px 52px;
+  background: white;
+  border-radius: 65px;
+  margin: 32px auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 14px;
+  z-index: 999;
+}
+
+.nav-left {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ff4b2b;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======================= MOBILE NAVBAR ======================= */
+@media (max-width: 850px) {
+
+  .navbar {
+    padding: 22px 36px;
+    border-radius: 55px;
+    gap: 24px;
+  }
+
+  /* Hide menu by default on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* DROPDOWN MENU ON MOBILE */
+  .nav-links.open {
+    display: flex !important;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px 26px;
+    border-radius: 18px;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+    z-index: 2000;
+  }
+}
+
+/* ======================= HERO SECTION ======================= */
+
+.hero {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.red { color: #ff4b2b; }
+.yellow { color: #ffb400; }
+
+.hero-sub {
+  margin-top: 14px;
+  font-size: 17px;
+  color: #555;
+}
+
+.order-btn {
+  margin-top: 24px;
+  background: #ff4b2b;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 28px;
+  border: none;
+  font-size: 16px;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-img {
+  width: 360px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ======================= FOOD SECTION ======================= */
+
+.food-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 32px;
+}
+
+.food-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.food-card {
+  background: white;
+  padding: 16px;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0px 5px 16px rgba(0,0,0,0.1);
+}
+
+.food-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.food-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.food-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #ff4b2b;
+  color: white;
+  padding: 7px 8px;
+  border-radius: 50%;
+}
+
+/* ======================= MORE MOBILE ======================= */
+
+@media (max-width: 950px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .phone-img {
+    width: 300px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ======================= SERVICE SECTION ======================= */
+
+.service-section {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 32px;
+}
+
+.service-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.service-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* CHEF IMAGE */
+.chef-video {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* RIGHT SIDE SERVICE LIST */
+.service-right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.service-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff4b2b;          /* Orange mixed red accent */
+}
+
+.service-item p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.4;
+}
+/* ======================= FOOTER ======================= */
+
+.footer {
+  background: #1b1b1b;
+  color: white;
+  padding: 60px 0 25px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* LEFT SECTION */
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-about p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* MIDDLE LINKS */
+.footer-links {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-links h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff4b2b;
+}
+
+/* RIGHT — CONTACT FORM */
+.footer-form {
+  flex: 1;
+  min-width: 260px;
+}
+
+.footer-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  padding: 12px 14px;
+  background: #262626;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-form textarea {
+  resize: none;
+}
+
+.footer-btn {
+  margin-top: 6px;
+  padding: 12px;
+  background: #ff4b2b;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-btn:hover {
+  background: #e8431d;
+}
+
+/* BOTTOM COPYRIGHT */
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links ul,
+  .footer-about,
+  .footer-form {
+    text-align: center;
+  }
+
+  .footer-form form {
+    width: 100%;
+  }
+}
+
+
+/* ======================= SERVICE MOBILE RESPONSIVE ======================= */
+
+@media (max-width: 900px) {
+  .service-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chef-img {
+    width: 300px;
+  }
+
+  .service-item h3 {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}
