@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* ================= NAVBAR ================= */}
       <div className="navbar-wrapper">
         <nav className="navbar">
-          <div className="nav-left">RAAM'S FOOD</div>
+          <div className="nav-left">Baker's cafe</div>
 
           <div className={`nav-links ${menuOpen ? "open" : ""}`}>
             <a href="#menu">Menu</a>
@@ -240,7 +240,7 @@ export default function HomePage() {
         </div>
 
         <div className="footer-bottom">
-          © 2025 RAAM'S FOOD — All Rights Reserved.
+          © 2025 Baker's cafe — All Rights Reserved.
         </div>
       </footer>
 
