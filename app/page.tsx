@@ -206,7 +206,7 @@ export default function HomePage() {
 
           {/* LEFT */}
           <div className="footer-about">
-            <h2 className="footer-logo">RAAM'S FOOD</h2>
+            <h2 className="footer-logo">Baker's cafe</h2>
             <p>
               Serving the best Indian flavors with fresh ingredients  
               and fast delivery across the city.
